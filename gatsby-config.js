@@ -1,8 +1,15 @@
+const path = require(`path`);
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `GatsbyJS`,
+    author: `Peter`,
+    siteUrl: `https://www.gatsbyjs.org`,
+    description: `Blazing fast modern site generator for React`,
+    twitter: `@gatsbyjs`,
+  },
+  mapping: {
+    "MarkdownRemark.frontmatter.author": `AuthorYaml`,
+    "Mdx.frontmatter.author": `AuthorYaml`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,8 +20,25 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-gatsby-api-calls`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    `gatsby-transformer-yaml`,
+    `gatsby-transformer-documentationjs`,
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

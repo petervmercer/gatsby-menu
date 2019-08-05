@@ -39,13 +39,13 @@ const extendSidebarData = item => {
 }
 
 const itemListDocs = extendSidebarData(docsSidebar)
-const itemListTutorial = extendSidebarData(tutorialSidebar)
-const itemListContributing = extendSidebarData(contributingSidebar)
-const itemListFeatures = extendSidebarData(featuresSidebar)
+//const itemListTutorial = extendSidebarData(tutorialSidebar)
+//const itemListContributing = extendSidebarData(contributingSidebar)
+//const itemListFeatures = extendSidebarData(featuresSidebar)
 
 export {
   itemListDocs,
-  itemListTutorial,
-  itemListContributing,
-  itemListFeatures,
+  //itemListTutorial,
+  //itemListContributing,
+  //itemListFeatures,
 }

@@ -15,16 +15,16 @@ import {
   zIndices,
 } from "../../utils/presets";
 import { breakpointGutter } from "../../utils/styles";
-import Banner from "../../components/banner";
+//import Banner from "../../components/banner";
 import Navigation from "../../components/navigation";
-import MobileNavigation from "../../components/navigation-mobile";
+//import MobileNavigation from "../../components/navigation-mobile";
 import PageWithSidebar from "../../components/page-with-sidebar";
 import SiteMetadata from "../../components/site-metadata";
 
 // Import Futura PT typeface
 import "../../assets/fonts/futura";
 
-import { skipLink } from "../../utils/styles";
+//import { skipLink } from "../../utils/styles";
 
 let windowWidth;
 
@@ -152,8 +152,8 @@ class DefaultLayout extends React.Component {
     return (
       <>
         <SiteMetadata pathname={this.props.location.pathname} />
-        <SkipNavLink css={skipLink}>Skip to main content</SkipNavLink>
-        <Banner />
+
+
         <Navigation pathname={this.props.location.pathname} />
         <div
           className={`main-body`}
@@ -177,7 +177,7 @@ class DefaultLayout extends React.Component {
             renderContent={() => this.props.children}
           />
         </div>
-        <MobileNavigation />
+
       </>
     )
   }
